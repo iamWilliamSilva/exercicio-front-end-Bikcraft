@@ -38,6 +38,7 @@ p {
   gap: 1.25rem;
   justify-content: center;
   list-style: none;
+  padding: 0px;
 }
 
 .menu a {
@@ -70,7 +71,12 @@ p {
   justify-items: end;
 }
 
-#introducao::after {
+  .introducao-cover img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+.introducao::after {
   content: '';
   width: 3.8rem;
   height: 0.25rem;
@@ -136,4 +142,72 @@ footer {
   padding: 2.5rem;
   text-align: center;
   box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
+  .header {
+    gap: 2rem;
+  }
+
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  
+  .introducao::after {
+    display: none;
+  }
+
+  .introducao {
+    text-align: left;
+    justify-items: flex-start;
+  }
+
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu a {
+    display: flex;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+
+  .vantagens {
+    padding: 1rem;
+  }
+
+  .vantagens-item p {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    padding: 2.5rem 0.5rem;
+  }
+
+  footer p {
+    font-size: 1.1rem;
+  }
+
+  .introducao h1 {
+    font-size: 1.5rem;
+  }
+
+  .introducao p {
+    font-size: 1.1rem;
+  }
+
+  .botao {
+    padding: 0.8rem 1.8rem;
+  }
 }
